@@ -1,18 +1,18 @@
-import './images/mastercard.jpeg'
-import './images/visa.png'
+import './img/visa.png'
+import './img/master-card.svg'
 
 function CreditCard (prop) {
-    let logo = ''
+    let logos = ''
     if(prop.type === "Visa"){
-        logo = './images/visa.png'
+        logos = <img className='m-2' src='./img/visa.png' alt='Visa'/>
     } else if (prop.type === "Master Card") {
-        logo = './images/mastercard.jpeg'
+        logos = <img className='m-2' src='./img/master-card.svg' alt='Master Card'/>
     }
-    console.log(logo)
+    console.log(logos)
     return(
         <div style={{backgroundColor: prop.bgColor, color: prop.color}} className='rounded m-1'>
             <div className='d-flex flex-row-reverse'>
-                <img src={logo} alt='logo'/>
+                {logos}
             </div>
             <div>
                 <p className='fs-2 mx-5 my-3 text-nowrap'>&#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; {prop.number.slice(-4)}</p>
