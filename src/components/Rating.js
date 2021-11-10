@@ -8,11 +8,11 @@ function Rating(prop) {
     let total = 5 - stars
     console.log(total)
     let rows = []
-    for (let i = 0; i < prop.children; i++) {
+    for (let i = 0; i < stars; i++) {
       rows.push(<img style={{height: 'auto', width: '2.5rem'}} src={fullStar} alt='fullStar'/>)
     }
     for (let i = 0; i < total; i++) {
-        rows.push(<img style={{height: 'auto', width: '2rem'}} src={empityStar} alt='empityStar'/>)
+        rows.push(<img style={{height: 'auto', width: '2rem', margin: '4px'}} src={empityStar} alt='empityStar'/>)
       }
     
 
