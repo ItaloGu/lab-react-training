@@ -1,11 +1,12 @@
-
+import Visa from './img/visa.png'
+import MasterCard from './img/master-card.svg'
 
 function CreditCard (prop) {
     let logos = ''
     if(prop.type === "Visa"){
-        logos = <img className='m-2' src='./img/visa.png' alt='Visa'/>
+        logos = <img style={{height: 'auto', width: '2.5rem'}} className='m-2' src={Visa} alt='Visa'/>
     } else if (prop.type === "Master Card") {
-        logos = <img className='m-2' src='./img/master-card.svg' alt='Master Card'/>
+        logos = <img style={{height: 'auto', width: '2rem'}} className='m-2' src={MasterCard} alt='Master Card'/>
     }
     console.log(logos)
     return(
