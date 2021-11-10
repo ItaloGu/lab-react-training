@@ -4,9 +4,9 @@ import empityStar from './img/empityStar.png'
 function Rating(prop) {
 
     let stars = Math.round(prop.children)
-    console.log(stars)
+    
     let total = 5 - stars
-    console.log(total)
+    
     let rows = []
     for (let i = 0; i < stars; i++) {
       rows.push(<img style={{height: 'auto', width: '2.5rem'}} src={fullStar} alt='fullStar'/>)

@@ -8,7 +8,7 @@ function CreditCard (prop) {
     } else if (prop.type === "Master Card") {
         logos = <img style={{height: 'auto', width: '2rem'}} className='m-2' src={MasterCard} alt='Master Card'/>
     }
-    console.log(logos)
+    
     return(
         <div style={{backgroundColor: prop.bgColor, color: prop.color}} className='rounded m-1'>
             <div className='d-flex flex-row-reverse'>
