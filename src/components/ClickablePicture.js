@@ -3,7 +3,7 @@ import withGlasses from  './img/persons/maxence-glasses.png'
 import withoutGlasses from './img/persons/maxence.png'
 
 function ClickablePicture () {
-    const picture = [withGlasses, withoutGlasses]
+    const picture = [withoutGlasses, withGlasses]
     const [image, setImage] = useState(0)
 
     function changeImage() {
