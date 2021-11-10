@@ -18,7 +18,7 @@ function Greetings(prop){
     }
 
     return(
-        <div className='border border-dark m-1'>
+        <div className='border border-dark m-1' style={{textAlign: 'center'}}>
             <p lang={prop.lang}>{SwitchLang()} {prop.children}</p>
         </div>
     )
