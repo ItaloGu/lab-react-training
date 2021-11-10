@@ -1,5 +1,4 @@
-import './img/visa.png'
-import './img/master-card.svg'
+
 
 function CreditCard (prop) {
     let logos = ''
