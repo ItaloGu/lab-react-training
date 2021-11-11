@@ -8,7 +8,7 @@ function FaceBook() {
   for (let [key, value] of Object.entries(profiles)) {
 
     person.push(
-      <div key={key} className="border border-dark d-flex flex-row m-1">
+      <div key={value.firstName + key} className="border border-dark d-flex flex-row m-1">
         <img
           style={{ height: '8rem', width: 'auto', margin: '0.3rem' }}
           src={value.img}
