@@ -9,7 +9,7 @@ function Rating(prop) {
   let rows = [];
   for (let i = 0; i < stars; i++) {
     rows.push(
-      <img
+      <img key ={(i + 10)}
         style={{ height: 'auto', width: '2.5rem' }}
         src={fullStar}
         alt="fullStar"
@@ -18,7 +18,7 @@ function Rating(prop) {
   }
   for (let i = 0; i < total; i++) {
     rows.push(
-      <img
+      <img key={i}
         style={{ height: 'auto', width: '2rem', margin: '4px' }}
         src={empityStar}
         alt="empityStar"

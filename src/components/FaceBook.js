@@ -5,14 +5,7 @@ import FaceBook2 from './FaceBook2';
 function FaceBook() {
   let person = [];
 
-  for (var [key, value] of Object.entries(profiles)) {
-    let isTeacher = '';
-
-    if (value.isStudent) {
-      isTeacher = 'Student';
-    } else {
-      isTeacher = 'Teacher';
-    }
+  for (let [key, value] of Object.entries(profiles)) {
 
     person.push(
       <div key={key} className="border border-dark d-flex flex-row m-1">
@@ -21,7 +14,7 @@ function FaceBook() {
           src={value.img}
           alt={value.firstName}
         />
-        <div>
+        <div className='m-1'>
           <p className="text1">
             <strong>First Name: </strong>
             {value.firstName}
@@ -36,7 +29,7 @@ function FaceBook() {
           </p>
           <p className="text1">
             <strong>Type: </strong>
-            {isTeacher}
+            {value.isStudent ? 'Student' : 'Teacher'}
           </p>
         </div>
       </div>
