@@ -1,5 +1,6 @@
 import profiles from '../data/berlin.json'
 import './IdCards.css'
+import FaceBook2 from './FaceBook2'
 
 function FaceBook(){
 
@@ -34,6 +35,7 @@ function FaceBook(){
 
     return (
         <div>
+        <FaceBook2 />
             {person}
         </div>
     )

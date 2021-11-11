@@ -10,10 +10,25 @@ import {useState} from 'react'
 function Dice() {
     const dices = [dice1, dice2, dice3, dice4, dice5, dice6]
 
-    
+    let [dice, setDice] = useState(dices[Math.floor( Math.random() * 6 )])
+
+    function randomSide(){
+        dice = diceEmpty;
+
+        setDice(dice);
+
+
+        function randomDice() {
+            setDice(dices[Math.floor( Math.random() * 6 )])
+        }
+
+        setTimeout(randomDice, 1000);
+        
+
+    }
 
     return(
-        <img  style={{height: '10rem', width: 'auto', margin: '1rem'}} src={dices[Math.floor( Math.random() * 6 )]} alt='' />
+        <img onClick={randomSide} style={{height: '10rem', width: 'auto', margin: '1rem'}} src={dice} alt='' />
     )
 }
 
